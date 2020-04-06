@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+header {
+    background-image: url(../background.jpg);
+    background-position: center;
+    height: 100vh;
+}
+
+div.navbar {
+    padding: 5vh 6vw;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+}
+
+div.search {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}   
+
+input.bar {
+    width: 380px;
+    height: 35px;
+    opacity: 0.7;
+    transform:translate(25px, 0);
+    border-radius: 35px;
+    border-style: none;
+    background-color:black;
+    outline: none;
+    font-size: medium;
+    color:rgb(161, 105, 0);
+    padding: 5px 15px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:rgb(145, 109, 43);
+    opacity: 1; /* Firefox */
+  }
+
+button.search {
+    color: rgb(161, 105, 0);
+    background-color: transparent;
+    transform: translate(-25px, 0%);
+    
+    border-style: none;
+    outline: none;
+    opacity: 0.7;
+}
+
+div.buttons {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-45%, 200%);
+    
+}
+
+div.buttons li {
+    display: inline;
+    padding: 5px 10px;
+}
+
+div.buttons li a:hover {
+    background-color:white;
+    transition: ease 0.3s;
+    color: rgb(194, 130, 11) ;
+    padding: 8.5px 13.5px;
+}
+
+
+div.buttons li a {
+    transition: ease 0.3s;
+    text-decoration: none;
+    color: white;
+    padding: 6px 11px;
+    border-radius: 100px;
+    border:1px white solid;
+}
+
+img {
+    width: 180px;
+    -webkit-filter: invert(1);
+    filter: invert(1)
+}
+
+ul {
+    padding: 10px 0;
+    list-style-type: none;
+    float: right;
+    font-size: 20px;
+}
+
+ul li {
+    display: inline;
+    padding: 0 2vw;
+}
+
+ul li a {
+    text-decoration: none;
+    color: orange;
+    position: relative;
+}
+
+ul li.active a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    background-color: orange;
+    transition: all 0.3s ease-in-out;
+}
+
+ul li a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    background-color: orange;
+    transition: all 0.3s ease-in-out;
+}
+
+ul li a:hover:before {
+    width: 100%
+}
